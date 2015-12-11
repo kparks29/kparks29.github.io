@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/kparks29/kparks29.github.io/issues"
   },
-  "homepage": "https://github.com/kparks29/kparks29.github.io#readme"
+  "homepage": "https://github.com/kparks29/kparks29.github.io#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-webserver": "^0.9.1"
+  }
 }
