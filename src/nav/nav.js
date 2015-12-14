@@ -3,6 +3,7 @@ import angular from 'angular';
 function config ($stateProvider) {
 	$stateProvider.state('nav', {
 		url: '',
+		abstract: true,
 		templateUrl: 'src/nav/nav.html',
 		controller: 'NavCtrl',
 		controllerAs: 'nav'
@@ -11,7 +12,7 @@ function config ($stateProvider) {
 
 class NavCtrl {
 	constructor () {
-		this.test = 'test';
+		this.test = 'header';
 	}
 }
 

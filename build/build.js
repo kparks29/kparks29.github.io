@@ -33398,13 +33398,45 @@ module.exports = angular;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _angular = require('angular');
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function config($stateProvider) {
+	$stateProvider.state('nav.about', {
+		url: '/about',
+		templateUrl: 'src/about/about.html',
+		controller: 'AboutCtrl',
+		controllerAs: 'about'
+	});
+}
+
+var AboutCtrl = function AboutCtrl() {
+	_classCallCheck(this, AboutCtrl);
+
+	this.name = 'about';
+};
+
+exports.default = _angular2.default.module('about', []).config(config).controller('AboutCtrl', AboutCtrl);
+
+},{"angular":3}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 function config($urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 }
 
 exports.default = config;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 var _angular = require('angular');
@@ -33423,16 +33455,96 @@ var _nav = require('./nav/nav');
 
 var _nav2 = _interopRequireDefault(_nav);
 
+var _home = require('./home/home');
+
+var _home2 = _interopRequireDefault(_home);
+
+var _about = require('./about/about');
+
+var _about2 = _interopRequireDefault(_about);
+
+var _projects = require('./projects/projects');
+
+var _projects2 = _interopRequireDefault(_projects);
+
+var _contact = require('./contact/contact');
+
+var _contact2 = _interopRequireDefault(_contact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // modules
 // libraries
 
-var dependencies = [_angularUiRouter2.default, _nav2.default.name];
+var dependencies = [_angularUiRouter2.default, _nav2.default.name, _home2.default.name, _about2.default.name, _projects2.default.name, _contact2.default.name];
 
 _angular2.default.module('Portfolio', dependencies);
 
-},{"./app.config":4,"./nav/nav":6,"angular":3,"angular-ui-router":1}],6:[function(require,module,exports){
+},{"./about/about":4,"./app.config":5,"./contact/contact":7,"./home/home":8,"./nav/nav":9,"./projects/projects":10,"angular":3,"angular-ui-router":1}],7:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _angular = require('angular');
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function config($stateProvider) {
+	$stateProvider.state('nav.contact', {
+		url: '/contact',
+		templateUrl: 'src/contact/contact.html',
+		controller: 'ContactCtrl',
+		controllerAs: 'contact'
+	});
+}
+
+var ContactCtrl = function ContactCtrl() {
+	_classCallCheck(this, ContactCtrl);
+
+	this.name = 'contact';
+};
+
+exports.default = _angular2.default.module('contact', []).config(config).controller('ContactCtrl', ContactCtrl);
+
+},{"angular":3}],8:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _angular = require('angular');
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function config($stateProvider) {
+	$stateProvider.state('nav.home', {
+		url: '/',
+		templateUrl: 'src/home/home.html',
+		controller: 'HomeCtrl',
+		controllerAs: 'home'
+	});
+}
+
+var HomeCtrl = function HomeCtrl() {
+	_classCallCheck(this, HomeCtrl);
+
+	this.name = 'home';
+};
+
+exports.default = _angular2.default.module('home', []).config(config).controller('HomeCtrl', HomeCtrl);
+
+},{"angular":3}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33450,6 +33562,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function config($stateProvider) {
 	$stateProvider.state('nav', {
 		url: '',
+		abstract: true,
 		templateUrl: 'src/nav/nav.html',
 		controller: 'NavCtrl',
 		controllerAs: 'nav'
@@ -33459,12 +33572,44 @@ function config($stateProvider) {
 var NavCtrl = function NavCtrl() {
 	_classCallCheck(this, NavCtrl);
 
-	this.test = 'test';
+	this.test = 'header';
 };
 
 exports.default = _angular2.default.module('nav', []).config(config).controller('NavCtrl', NavCtrl);
 
-},{"angular":3}]},{},[5])
+},{"angular":3}],10:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _angular = require('angular');
+
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function config($stateProvider) {
+	$stateProvider.state('nav.projects', {
+		url: '/projects',
+		templateUrl: 'src/projects/projects.html',
+		controller: 'ProjectsCtrl',
+		controllerAs: 'projects'
+	});
+}
+
+var ProjectsCtrl = function ProjectsCtrl() {
+	_classCallCheck(this, ProjectsCtrl);
+
+	this.name = 'projects';
+};
+
+exports.default = _angular2.default.module('projects', []).config(config).controller('ProjectsCtrl', ProjectsCtrl);
+
+},{"angular":3}]},{},[6])
 
 
 //# sourceMappingURL=build.js.map
