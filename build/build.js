@@ -33478,7 +33478,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var dependencies = [_angularUiRouter2.default, _nav2.default.name, _home2.default.name, _about2.default.name, _projects2.default.name, _contact2.default.name];
 
-_angular2.default.module('Portfolio', dependencies);
+_angular2.default.module('Portfolio', dependencies).config(_app2.default);
 
 },{"./about/about":4,"./app.config":5,"./contact/contact":7,"./home/home":8,"./nav/nav":9,"./projects/projects":10,"angular":3,"angular-ui-router":1}],7:[function(require,module,exports){
 'use strict';

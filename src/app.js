@@ -19,4 +19,5 @@ var dependencies = [
 	contactModule.name
 ];
 
-angular.module('Portfolio', dependencies);
+angular.module('Portfolio', dependencies)
+	.config(config);
