@@ -33430,8 +33430,9 @@ exports.default = _angular2.default.module('about', []).config(config).controlle
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-function config($urlRouterProvider) {
+function config($urlRouterProvider, $locationProvider) {
 	$urlRouterProvider.otherwise('/');
+	$locationProvider.html5Mode(true);
 }
 
 exports.default = config;
