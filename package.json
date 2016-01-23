@@ -1,36 +1,23 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Portfolio Site",
-  "main": "index.js",
+  "watch": "sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass --include-path scss ./main.scss > ./main.css",
+    "babel": "babel main.jsx -o main.js -s --presets es2015",
+    "watch-css": "nodemon -e scss -x \"npm run sass\"",
+    "watch-js": "nodemon -e jsx -x \"npm run babel\"",
+    "webserver": "http-server -p 9090 ./",
+    "livereload": "live-reload --port 9091 ./",
+    "serve": "parallelshell 'npm run babel' 'npm run livereload' 'npm run webserver' 'npm run watch-css' 'npm run watch-js'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kparks29/kparks29.github.io.git"
-  },
-  "author": "Kendrick Parks",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kparks29/kparks29.github.io/issues"
-  },
-  "homepage": "https://github.com/kparks29/kparks29.github.io#readme",
   "dependencies": {
-    "angular": "^1.4.8",
-    "angular-ui-router": "^0.2.15",
+    "babel-cli": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
-    "babelify": "7.2.0",
-    "browserify": "12.0.1",
-    "gulp": "3.9.0",
-    "gulp-load-plugins": "1.1.0",
-    "gulp-sass": "2.1.0",
-    "gulp-sourcemaps": "1.6.0",
-    "gulp-webserver": "0.9.1",
-    "path": "^0.12.7",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "3.6.1",
-    "yargs": "^3.31.0"
+    "http-server": "^0.8.5",
+    "live-reload": "^1.1.0",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "parallelshell": "^2.0.0"
   }
 }
