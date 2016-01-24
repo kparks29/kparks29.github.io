@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.jsx"],"names":[],"mappings":";;AAAA,SAAS,gBAAT,CAA0B,kBAA1B,EAA8C,YAAM;AACnD,KAAI,OAAO,SAAS,IAAT,CADwC;;AAGnD,SAAQ,GAAR,WAAoB,IAApB,EAHmD;CAAN,CAA9C","file":"main.js","sourcesContent":["document.addEventListener('DOMContentLoaded', () => {\n\tvar body = document.body;\n\t\n\tconsole.dir(`test ${body}`)\n})"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/main.jsx"],"names":[],"mappings":";;AAAA,SAAS,gBAAT,CAA0B,kBAA1B,EAA8C,YAAM,EAAN,CAA9C","file":"main.js","sourcesContent":["document.addEventListener('DOMContentLoaded', () => {\n\t\n})"]}

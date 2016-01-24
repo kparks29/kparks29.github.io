@@ -1,0 +1,79 @@
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+  body nav {
+    position: relative;
+    min-height: 60px; }
+    body nav #logo {
+      height: 60px;
+      float: left;
+      line-height: 58px; }
+      body nav #logo a {
+        color: black;
+        text-decoration: none; }
+        body nav #logo a span {
+          border: 1px solid black;
+          margin: 0 0 0 25px;
+          padding: 2px 20px;
+          font-size: 20px; }
+    body nav ul {
+      height: 60px;
+      float: right;
+      margin: 0 40px 0 0;
+      padding: 0 0 0 10px; }
+      body nav ul a {
+        color: black;
+        text-decoration: none; }
+        body nav ul a li {
+          display: inline-block;
+          line-height: 60px;
+          padding: 0 10px 0 0;
+          font-size: 20px; }
+  body .section {
+    min-height: 700px;
+    width: 100%;
+    padding: 25px 0 0; }
+    body .section h2 {
+      text-align: center;
+      font-size: 50px;
+      line-height: 50px;
+      margin: 0 0 70px; }
+  body #home {
+    min-height: 500px;
+    padding: 100px 0 0 0; }
+    body #home h1 {
+      text-align: center;
+      margin: 0 0 15px;
+      font-size: 64px;
+      line-height: 64px; }
+    body #home h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 28px; }
+  body #work #projects {
+    margin: 0 auto;
+    width: 892px; }
+    body #work #projects div {
+      height: 200px;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 0 10px;
+      display: inline-block; }
+  body #about p {
+    margin: 0 40px 15px;
+    font-size: 28px; }
+  body #contact #contact-details {
+    width: calc(100% - 140px);
+    min-height: 100px;
+    margin: 0 40px 0 100px; }
+    body #contact #contact-details div {
+      display: inline-block;
+      padding: 10px 0;
+      font-size: 24px; }
+      body #contact #contact-details div:nth-child(odd) {
+        width: calc(55% - 2px); }
+      body #contact #contact-details div:nth-child(even) {
+        width: calc(45% - 2px); }
+

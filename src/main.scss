@@ -1,0 +1,109 @@
+body {
+	min-height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	nav {
+		position: relative;
+		min-height: 60px;
+		#logo {
+			height: 60px;
+			float: left;
+			line-height: 58px;
+			a {
+				color: black;
+				text-decoration: none;
+				span {
+					border: 1px solid black;
+					margin: 0 0 0 25px;
+					padding: 2px 20px;
+					font-size: 20px;
+				}
+			}
+		}
+		ul {
+			height: 60px;
+			float: right;
+			margin: 0 40px 0 0;
+			padding: 0 0 0 10px;
+			a {
+				color: black;
+				text-decoration: none;
+				li {
+					display: inline-block;
+					line-height: 60px;
+					padding: 0 10px 0 0;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.section {
+		min-height: 700px;
+		width: 100%;
+		padding: 25px 0 0;
+		h2 {
+			text-align: center;
+			font-size: 50px;
+			line-height: 50px;
+			margin: 0 0 70px;
+		}
+	}
+
+	#home {
+		min-height: 500px;
+		padding: 100px 0 0 0;
+		h1 {
+			text-align: center;
+			margin: 0 0 15px;
+			font-size: 64px;
+			line-height: 64px;
+		}
+		h2 {
+			margin: 0;
+			font-size: 28px;
+			line-height: 28px;
+		}
+	}
+
+	#work {
+		#projects {
+			margin: 0 auto;
+			width: 892px;
+			div {
+				height: 200px;
+				width: 200px;
+				background-color: rgba(0, 0, 0, 0.4);
+				margin: 0 10px;
+				display: inline-block;
+			}
+		}
+	}
+
+	#about {
+		p {
+			margin: 0 40px 15px;
+			font-size: 28px;
+		}
+	}
+
+	#contact {
+		#contact-details {
+			width: calc(100% - 140px);
+			min-height: 100px;
+			margin: 0 40px 0 100px;
+			div {
+				display: inline-block;
+				padding: 10px 0;
+				font-size: 24px;
+				&:nth-child(odd) {
+					width: calc(55% - 2px);
+				}
+				&:nth-child(even) {
+					width: calc(45% - 2px);
+				}
+			}
+		}
+	}
+}
