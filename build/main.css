@@ -5,7 +5,8 @@ body {
   padding: 0; }
   body nav {
     position: relative;
-    min-height: 60px; }
+    min-height: 60px;
+    background-color: #BFC0C0; }
     body nav #logo {
       height: 60px;
       float: left;
@@ -42,7 +43,8 @@ body {
       margin: 0 0 70px; }
   body #home {
     min-height: 500px;
-    padding: 100px 0 0 0; }
+    padding: 100px 0 0 0;
+    background-color: #BFC0C0; }
     body #home h1 {
       text-align: center;
       margin: 0 0 15px;
@@ -52,28 +54,35 @@ body {
       margin: 0;
       font-size: 28px;
       line-height: 28px; }
-  body #work #projects {
-    margin: 0 auto;
-    width: 892px; }
-    body #work #projects div {
-      height: 200px;
-      width: 200px;
-      background-color: rgba(0, 0, 0, 0.4);
-      margin: 0 10px;
-      display: inline-block; }
-  body #about p {
-    margin: 0 40px 15px;
-    font-size: 28px; }
-  body #contact #contact-details {
-    width: calc(100% - 140px);
-    min-height: 100px;
-    margin: 0 40px 0 100px; }
-    body #contact #contact-details div {
-      display: inline-block;
-      padding: 10px 0;
-      font-size: 24px; }
-      body #contact #contact-details div:nth-child(odd) {
-        width: calc(55% - 2px); }
-      body #contact #contact-details div:nth-child(even) {
-        width: calc(45% - 2px); }
+  body #work {
+    background-color: #FFFFFF; }
+    body #work #projects {
+      margin: 0 auto;
+      width: 892px; }
+      body #work #projects div {
+        height: 200px;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 0 10px;
+        display: inline-block; }
+  body #about {
+    background-color: #BFC0C0; }
+    body #about p {
+      margin: 0 40px;
+      font-size: 28px;
+      padding-bottom: 15px; }
+  body #contact {
+    background-color: #4F5D75; }
+    body #contact #contact-details {
+      width: calc(100% - 140px);
+      min-height: 100px;
+      margin: 0 40px 0 100px; }
+      body #contact #contact-details div {
+        display: inline-block;
+        padding: 10px 0;
+        font-size: 24px; }
+        body #contact #contact-details div:nth-child(odd) {
+          width: calc(55% - 2px); }
+        body #contact #contact-details div:nth-child(even) {
+          width: calc(45% - 2px); }
 
