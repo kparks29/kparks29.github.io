@@ -1,92 +1,109 @@
-html {
-  height: 100%;
-  width: 100%; }
+@font-face {
+  font-family: futura_medium;
+  src: url(../assets/futura_medium.ttf); }
 
-body {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; }
-  body nav {
-    position: relative;
+  padding: 0;
+  color: #2D3142;
+  background-color: #ECECEC;
+  font-family: futura_medium;
+  letter-spacing: 3px; }
+
+nav {
+  position: relative;
+  height: 60px;
+  background-color: #ECECEC; }
+  nav #logo {
+    float: left;
+    margin: 20px 0 0 25px;
+    font-size: 40px; }
+  nav ul {
     height: 60px;
-    background-color: #BFC0C0; }
-    body nav #logo {
-      height: 60px;
-      float: left;
-      line-height: 58px; }
-      body nav #logo a {
-        color: black;
-        text-decoration: none; }
-        body nav #logo a span {
-          border: 1px solid black;
-          margin: 0 0 0 25px;
-          padding: 2px 20px;
-          font-size: 20px; }
-    body nav ul {
-      height: 60px;
-      float: right;
-      margin: 0 40px 0 0;
-      padding: 0 0 0 10px; }
-      body nav ul a {
-        color: black;
-        text-decoration: none; }
-        body nav ul a li {
-          display: inline-block;
-          line-height: 60px;
-          padding: 0 10px 0 0;
-          font-size: 20px; }
-  body .section {
-    height: 700px;
-    width: 100%;
-    padding: 25px 0 0; }
-    body .section h2 {
-      text-align: center;
-      font-size: 50px;
-      line-height: 50px;
-      margin: 0 0 70px; }
-  body #home {
-    height: calc(100% - 160px);
-    padding: 100px 0 0 0;
-    background-color: #ECECEC; }
-    body #home h1 {
-      text-align: center;
-      margin: 0 0 15px;
-      font-size: 64px;
-      line-height: 64px; }
-    body #home h2 {
-      margin: 0;
-      font-size: 28px;
-      line-height: 28px; }
-  body #work {
-    background-color: #FFFFFF; }
-    body #work #projects {
-      margin: 0 auto;
-      width: 892px; }
-      body #work #projects div {
-        height: 200px;
-        width: 200px;
-        background-color: rgba(0, 0, 0, 0.4);
-        margin: 0 10px;
-        display: inline-block; }
-  body #about {
-    background-color: #BFC0C0; }
-    body #about p {
-      margin: 0 40px;
-      font-size: 28px;
-      padding-bottom: 15px; }
-  body #contact {
-    background-color: #4F5D75; }
-    body #contact #contact-details {
-      width: calc(100% - 140px);
-      min-height: 100px;
-      margin: 0 40px 0 100px; }
-      body #contact #contact-details div {
-        display: inline-block;
-        padding: 10px 0;
-        font-size: 24px; }
-        body #contact #contact-details div:nth-child(odd) {
-          width: calc(55% - 2px); }
-        body #contact #contact-details div:nth-child(even) {
-          width: calc(45% - 2px); }
+    float: right;
+    margin: 0 40px 0 0;
+    padding: 0 0 0 10px; }
+    nav ul li {
+      display: inline-block;
+      line-height: 60px;
+      padding: 0 10px 0 0;
+      font-size: 20px; }
+
+.section {
+  width: 100%;
+  padding: 100px 0 0; }
+  .section h2 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 0 0 70px; }
+
+#home {
+  height: calc(100% - 60px);
+  padding: 0;
+  background-color: #ECECEC;
+  position: relative; }
+  #home h1 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 64px;
+    line-height: 64px;
+    text-transform: uppercase;
+    padding-top: 25%; }
+  #home h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 28px; }
+  #home #arrow {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 10px);
+    border: 5px solid #2D3142;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg); }
+
+#work {
+  height: calc(100% - 100px);
+  background-color: #FFFFFF;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  -ms-transition: -ms-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out; }
+  #work #projects {
+    margin: 0 auto;
+    width: 892px; }
+    #work #projects div {
+      height: 200px;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 0 10px 20px;
+      display: inline-block; }
+
+#about {
+  height: calc(100% - 100px);
+  background-color: #ECECEC; }
+  #about p {
+    margin: 0 40px;
+    font-size: 28px;
+    padding-bottom: 15px; }
+
+#contact {
+  height: 40%;
+  background-color: #4F5D75; }
+  #contact #contact-details {
+    width: calc(100% - 140px);
+    min-height: 100px;
+    margin: 0 40px 0 100px; }
+    #contact #contact-details div {
+      display: inline-block;
+      padding: 10px 0;
+      font-size: 24px; }
+      #contact #contact-details div:nth-child(odd) {
+        width: calc(55% - 4px); }
+      #contact #contact-details div:nth-child(even) {
+        width: calc(45% - 4px); }
 
