@@ -1,0 +1,17 @@
+@mixin transition ($duration, $transition) {
+	-webkit-transition: -webkit-transform $duration $transition;
+	-ms-transition: -ms-transform $duration $transition;
+	transition: transform $duration $transition;
+}
+
+@mixin translateY ($y) {
+	-webkit-transform: translateY($y);
+	-ms-transform: translateY($y);
+	transform: translateY($y);
+}
+
+@mixin rotate ($deg) {
+	-webkit-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+}

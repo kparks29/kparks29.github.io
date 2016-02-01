@@ -3,118 +3,183 @@ $gray: #BFC0C0;
 $white: #FFFFFF;
 $orange: #EF8343;
 $blue: #4F5D75;
+$lightGray: #ECECEC;
 
-body {
-	min-height: 100%;
+@font-face {
+    font-family: futura_medium;
+    src: url(../assets/futura_medium.ttf);
+}
+
+@import 'mixins';
+
+html, body {
+	height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	nav {
-		position: relative;
-		min-height: 60px;
-		background-color: $gray;
-		#logo {
-			height: 60px;
-			float: left;
-			line-height: 58px;
-			a {
-				color: black;
-				text-decoration: none;
-				span {
-					border: 1px solid black;
-					margin: 0 0 0 25px;
-					padding: 2px 20px;
-					font-size: 20px;
-				}
-			}
-		}
-		ul {
-			height: 60px;
-			float: right;
-			margin: 0 40px 0 0;
-			padding: 0 0 0 10px;
-			a {
-				color: black;
-				text-decoration: none;
-				li {
-					display: inline-block;
-					line-height: 60px;
-					padding: 0 10px 0 0;
-					font-size: 20px;
-				}
-			}
+	color: $darkBlue;
+	background-color: $lightGray;
+	font-family: futura_medium;
+	letter-spacing: 3px;
+	h1, h2, a {
+		color: $darkBlue;
+	}
+}
+
+nav {
+	position: relative;
+	height: 60px;
+	background-color: $lightGray;
+	#logo {
+		float: left;
+		margin: 20px 0 0 25px;
+		font-size: 40px;
+	}
+	ul {
+		height: 60px;
+		float: right;
+		margin: 0 40px 0 0;
+		padding: 0 0 0 10px;
+		li {
+			display: inline-block;
+			line-height: 60px;
+			padding: 0 10px 0 0;
+			font-size: 20px;
 		}
 	}
+}
 
-	.section {
-		min-height: 700px;
-		width: 100%;
-		padding: 25px 0 0;
-		h2 {
-			text-align: center;
-			font-size: 50px;
-			line-height: 50px;
-			margin: 0 0 70px;
-		}
+.section {
+	width: 100%;
+	padding: 100px 0 0;
+	h2 {
+		text-align: center;
+		font-size: 50px;
+		line-height: 50px;
+		margin: 0 0 70px;
 	}
+}
 
-	#home {
-		min-height: 500px;
-		padding: 100px 0 0 0;
-		background-color: $gray;
-		h1 {
-			text-align: center;
-			margin: 0 0 15px;
-			font-size: 64px;
-			line-height: 64px;
-		}
-		h2 {
-			margin: 0;
-			font-size: 28px;
-			line-height: 28px;
-		}
+#home {
+	height: calc(100% - 60px);
+	padding: 0;
+	background-color: $lightGray;
+	position: relative;
+	h1 {
+		text-align: center;
+		margin: 0 0 15px;
+		font-size: 64px;
+		line-height: 64px;
+		text-transform: uppercase;
+		padding-top: 25%;
 	}
+	h2 {
+		margin: 0;
+		font-size: 28px;
+		line-height: 28px;
+	}
+	#arrow {
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		bottom: 40px;
+		left: calc(50% - 10px);
+		border: 5px solid $darkBlue;
+		border-top: none;
+		border-left: none;
+		transform: rotate(45deg);
+	}
+}
 
-	#work {
-		background-color: $white;
-		#projects {
-			margin: 0 auto;
-			width: 892px;
-			div {
-				height: 200px;
-				width: 200px;
-				background-color: rgba(0, 0, 0, 0.4);
-				margin: 0 10px;
+#work {
+	height: calc(100% - 100px);
+	background-color: $white;
+	#projects {
+		margin: 0 auto;
+		width: 900px;
+		.project {
+			height: 200px;
+			width: 200px;
+			background-color: rgba(0, 0, 0, 0.4);
+			margin: 0 10px 20px;
+			display: inline-block;
+			color: white;
+			vertical-align: middle;
+			#homdna-logo {
+				height: 35px;
+				width: 35px;
+				background-image: url(../assets/homdna-logo.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
 				display: inline-block;
+				margin: 75px 0 0 15px;
+			}
+			#homdna-text {
+				height: 20px;
+				width: 120px;
+				background-image: url(../assets/homdna-text.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				display: inline-block;
+				position: relative;
+				top: 5px;
+			}
+			&#stylelust {
+				font-size: 20px;
+				line-height: 200px;
+				text-align: center;
+			}
+			&#project3, &#project4 {
+				font-size: 20px;
+				line-height: 200px;
+				text-align: center;
+				color: $darkBlue;
 			}
 		}
 	}
+}
 
-	#about {
-		background-color: $gray;
-		p {
-			margin: 0 40px;
-			font-size: 28px;
-			padding-bottom: 15px;
-		}
+#about {
+	height: calc(100% - 100px);
+	background-color: $lightGray;
+	p {
+		margin: 0 40px;
+		font-size: 28px;
+		padding-bottom: 15px;
+		text-align: center;
 	}
-
-	#contact {
+	button {
+		margin: 50px calc(50% - 76px) 0;
+		text-align: center;
 		background-color: $blue;
-		#contact-details {
-			width: calc(100% - 140px);
-			min-height: 100px;
-			margin: 0 40px 0 100px;
-			div {
-				display: inline-block;
-				padding: 10px 0;
-				font-size: 24px;
-				&:nth-child(odd) {
-					width: calc(55% - 2px);
-				}
-				&:nth-child(even) {
-					width: calc(45% - 2px);
-				}
+		color: $white;
+		padding: 10px 30px;
+		border-width: 1px;
+		width: 152px;
+		font-size: 14px;
+		outline: none;
+		&:active {
+			outline: none;
+		}
+	}
+}
+
+#contact {
+	height: 40%;
+	background-color: $blue;
+	#contact-details {
+		width: calc(100% - 140px);
+		min-height: 100px;
+		margin: 0 40px 0 100px;
+		div {
+			display: inline-block;
+			padding: 10px 0;
+			font-size: 24px;
+			&:nth-child(odd) {
+				width: calc(55% - 4px);
+			}
+			&:nth-child(even) {
+				width: calc(45% - 4px);
 			}
 		}
 	}
