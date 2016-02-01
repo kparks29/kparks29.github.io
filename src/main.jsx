@@ -49,4 +49,5 @@ function addEventListeners () {
 // waits till dom is loaded to run anything
 document.addEventListener('DOMContentLoaded', () => {
 	addEventListeners();
+
 });

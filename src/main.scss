@@ -21,6 +21,9 @@ html, body {
 	background-color: $lightGray;
 	font-family: futura_medium;
 	letter-spacing: 3px;
+	h1, h2, a {
+		color: $darkBlue;
+	}
 }
 
 nav {
@@ -91,16 +94,47 @@ nav {
 #work {
 	height: calc(100% - 100px);
 	background-color: $white;
-	@include transition(0.6s, ease-in-out);
 	#projects {
 		margin: 0 auto;
-		width: 892px;
-		div {
+		width: 900px;
+		.project {
 			height: 200px;
 			width: 200px;
 			background-color: rgba(0, 0, 0, 0.4);
 			margin: 0 10px 20px;
 			display: inline-block;
+			color: white;
+			vertical-align: middle;
+			#homdna-logo {
+				height: 35px;
+				width: 35px;
+				background-image: url(../assets/homdna-logo.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				display: inline-block;
+				margin: 75px 0 0 15px;
+			}
+			#homdna-text {
+				height: 20px;
+				width: 120px;
+				background-image: url(../assets/homdna-text.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				display: inline-block;
+				position: relative;
+				top: 5px;
+			}
+			&#stylelust {
+				font-size: 20px;
+				line-height: 200px;
+				text-align: center;
+			}
+			&#project3, &#project4 {
+				font-size: 20px;
+				line-height: 200px;
+				text-align: center;
+				color: $darkBlue;
+			}
 		}
 	}
 }
@@ -112,6 +146,21 @@ nav {
 		margin: 0 40px;
 		font-size: 28px;
 		padding-bottom: 15px;
+		text-align: center;
+	}
+	button {
+		margin: 50px calc(50% - 76px) 0;
+		text-align: center;
+		background-color: $blue;
+		color: $white;
+		padding: 10px 30px;
+		border-width: 1px;
+		width: 152px;
+		font-size: 14px;
+		outline: none;
+		&:active {
+			outline: none;
+		}
 	}
 }
 
