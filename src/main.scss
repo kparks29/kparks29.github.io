@@ -1,3 +1,9 @@
+$darkBlue: #2D3142;
+$gray: #BFC0C0;
+$white: #FFFFFF;
+$orange: #EF8343;
+$blue: #4F5D75;
+
 body {
 	min-height: 100%;
 	width: 100%;
@@ -6,6 +12,7 @@ body {
 	nav {
 		position: relative;
 		min-height: 60px;
+		background-color: $gray;
 		#logo {
 			height: 60px;
 			float: left;
@@ -54,6 +61,7 @@ body {
 	#home {
 		min-height: 500px;
 		padding: 100px 0 0 0;
+		background-color: $gray;
 		h1 {
 			text-align: center;
 			margin: 0 0 15px;
@@ -68,6 +76,7 @@ body {
 	}
 
 	#work {
+		background-color: $white;
 		#projects {
 			margin: 0 auto;
 			width: 892px;
@@ -82,13 +91,16 @@ body {
 	}
 
 	#about {
+		background-color: $gray;
 		p {
-			margin: 0 40px 15px;
+			margin: 0 40px;
 			font-size: 28px;
+			padding-bottom: 15px;
 		}
 	}
 
 	#contact {
+		background-color: $blue;
 		#contact-details {
 			width: calc(100% - 140px);
 			min-height: 100px;
